@@ -142,9 +142,9 @@ void loop()
   if ( controllerCommand == DC_SILENCE || controllerCommand == DC_GET_DATA_RIGHT_NOW)
   {
     
-    float temperature0 = sensors[0]->getData();
-    byte t = (byte)temperature0;
-    radio.write(&t, sizeof(t)); // Отправляем данные через радиомодуль
+    float t0 = sensors[0]->getData();
+    byte t = (byte)t0;
+    radio.write(&t0, sizeof(t0)); // Отправляем данные через радиомодуль
    
   }
   delay(10);
